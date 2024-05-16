@@ -1,0 +1,48 @@
+.feng-tag {
+    display: inline-block;
+    padding: 6px 10px;
+    border: 1px solid rgba(var(--feng-app-color), .1);
+    border-radius: 100vh;
+    background-color: var(--feng-app-background-color);
+    color: rgb(var(--feng-app-color));
+    cursor: pointer;
+}
+
+.feng-tag .feng-tag-content {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.feng-tag p {
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.7em;
+    margin: 0;
+}
+
+.feng-tag--select {
+    background-color: var(--feng-app-highlight-background-color);
+    color: var(--feng-app-highlight-text-color);
+}
+
+.feng-tag--select svg {
+    fill: var(--feng-app-highlight-text-color);
+}
+
+.feng-tag:hover {
+    background-color: var(--feng-app-hover-background-color);
+}
+
+.feng-tag--select:hover {
+    background-color: var(--feng-app-highlight-hover-background-color);
+}

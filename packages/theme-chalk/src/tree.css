@@ -1,0 +1,74 @@
+.feng-tree {
+    list-style: none;
+    color: rgb(var(--feng-text-color));
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+    margin: 0!important;
+    position: relative;
+    list-style: none!important;
+}
+
+.feng-tree-root__children::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 0;
+    width: 0.5px;
+    height: 100%;
+    background: rgb(var(--feng-text-color), 0.4);
+}
+
+.feng-tree__node {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.feng-tree__node:hover {
+    background-color: #6c6c6c2c;
+}
+
+.feng-tree-before__node {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+}
+
+.feng-tree-before__node--haschildren {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 16px;
+    height: 16px;
+    z-index: 1;
+    transform: rotate(0deg);
+    transition: all 0.2s;
+}
+
+.feng-tree-before__node--haschildren :deep(svg) {
+    fill: rgb(var(--feng-text-color), 1);
+}
+
+.feng-tree-children {
+    overflow-y: hidden;
+}
+
+.feng-tree__node--opened .feng-tree-before__node--haschildren {
+    transform: rotate(90deg);
+}
+
+.feng-tree__node--closed~.feng-tree-children {
+    height: 0;
+
+}
+
+.feng-tree__node--opened~.feng-tree-children {
+    height: auto;
+}

@@ -1,0 +1,85 @@
+.feng-table {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-top-width: 0;
+    border-radius: 5px;
+    table-layout: fixed;
+    color: rgb(var(--feng-app-color), 0.8);
+    background-color: rgba(var(--feng-theme-color));
+    /* overflow-y: overlay; */
+    overflow-y: scroll;
+}
+
+.feng-table::-webkit-scrollbar {
+    -webkit-appearance: none;
+    display: none;
+}
+
+.feng-table table {
+    display: table;
+    margin: 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.feng-table th:last-child {
+    border-right: none;
+}
+
+.feng-table th,
+.feng-table tr,
+.feng-table td {
+    padding: 0;
+    border: none;
+    background-color: #0000;
+}
+
+.feng-table table th div {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: rgba(var(--feng-theme-color), 0.8);
+    font-weight: 100;
+}
+
+.feng-table thead {
+    position: sticky;
+    top: 0;
+    background-color: rgb(var(--feng-theme-color));
+    font-size: 12px;
+}
+
+.feng-table tbody {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.feng-table td div {
+    padding: 8px 5px;
+    margin: 2px 0;
+    text-align: left;
+}
+
+.feng-table td:first-child div {
+    border-radius: 3px 0 0 3px;
+    margin-left: 5px;
+}
+
+.feng-table td:last-child div {
+    border-radius: 0 3px 3px 0;
+    margin-right: 5px;
+}
+
+.feng-table tbody tr:nth-child(2n) div {
+    background-color: var(--feng-app-color);
+}
+
+.feng-table tbody tr:nth-child(2n+1) div {
+    background-color: rgb(var(--feng-app-color), 0.03);
+}
+
+.feng-table tbody tr:hover div {
+    background-color: rgb(var(--feng-app-color), 0.08);
+}

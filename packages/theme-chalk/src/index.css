@@ -1,0 +1,92 @@
+@import "./icon.css";
+@import "./button.css";
+@import "./tag.css";
+@import "./checkbox.css";
+@import "./select.css";
+@import "./radio.css";
+@import "./navigationRadio.css";
+@import "./slider.css";
+@import "./switch.css";
+@import "./dialog.css";
+@import "./table.css";
+@import "./tree.css";
+@import "./input.css";
+@import "./textarea.css";
+@import "./itemMenu.css";
+@import "./listMenu.css";
+@import "./codeCard.css";
+
+:root {
+    --feng-theme-color: 243, 243, 243;
+    --feng-text-color: 0, 0, 0;
+
+    /* 组件主题色 */
+    --feng-app-background-color: #ffffff;
+    --feng-app-color: 0, 0, 0;
+    --feng-app-hover-background-color: #f6f6f6e8;
+    --feng-app-hover-color: #5b5b5b;
+    --feng-app-shadow: rgba(0, 0, 0, 0.1) 0px 2px 3px -1px, rgba(0, 0, 0, 0.06) 0px 2px 2px -1px;
+    --feng-app-highlight-background-color: #07cddb;
+    --feng-app-highlight-hover-background-color: #06c6d3;
+    --feng-app-highlight-text-color: #ffffff;
+    --feng-app-card-content-background-color: #ffffff;
+    --feng-app-card-footer-background-color: #f3f3f3;
+
+}
+
+html.light {
+    /* 亮 */
+    --feng-theme-color: 243, 243, 243;
+    --feng-text-color: 0, 0, 0;
+
+    --feng-app-background-color: #ffffff;
+    --feng-app-color: 0, 0, 0;
+    --feng-app-hover-background-color: #f6f6f6e8;
+    --feng-app-hover-color: #5b5b5b;
+    --feng-app-shadow: rgba(0, 0, 0, 0.1) 0px 2px 3px -1px, rgba(0, 0, 0, 0.06) 0px 2px 2px -1px;
+    --feng-app-highlight-text-color: #ffffff;
+    --feng-app-card-content-background-color: #ffffff;
+    --feng-app-card-footer-background-color: #f3f3f3;
+}
+
+html.dark {
+    /* 暗 */
+    --feng-theme-color: 32, 32, 32;
+    --feng-text-color: 255, 255, 255;
+
+    --feng-app-background-color: #2d2d2d;
+    --feng-app-color: 255, 255, 255;
+    --feng-app-hover-background-color: #3e3e3e;
+    --feng-app-hover-color: #d0d0d0;
+    --feng-app-shadow: rgba(255, 255, 255, 0.4) 0px 2px 3px -1px, rgba(255, 255, 255, 0.2) 0px 2px 2px -1px;
+    --feng-app-highlight-text-color: #000000;
+    --feng-app-card-content-background-color: #2b2b2b;
+    --feng-app-card-footer-background-color: #202020;
+}
+
+*:focus {
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    background-color: rgba(var(--feng-theme-color), 0.7);
+}
+
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner {
+    height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #bababaa9;
+}
+
+.user-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

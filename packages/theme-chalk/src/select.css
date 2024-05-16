@@ -1,0 +1,109 @@
+.feng-select {
+    height: 100%;
+    /* width: max-content; */
+    text-overflow: ellipsis;
+    user-select: none;
+    padding-right: 40px;
+    display: inline-block;
+    padding: 0 10px;
+    background-color: var(--feng-app-background-color);
+    border: 1px solid rgba(var(--feng-app-color), .1);
+    border-radius: 4px;
+    -webkit-box-shadow: var(--feng-app-shadow);
+    box-shadow: var(--feng-app-shadow);
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    z-index: 100;
+}
+
+.feng-select:hover {
+    background-color: var(--feng-app-background-color-hover);
+}
+
+.feng-select:active {
+    color: var(--feng-app-hover-color);
+    box-shadow: none;
+}
+
+.feng-select,
+.feng-select-options {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 14px;
+    color: rgb(var(--feng-app-color));
+}
+
+.feng-select-down {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.feng-select-down svg {
+    transition: all .5s;
+}
+
+.feng-select-options {
+    margin-top: 5px;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: var(--feng-app-background-color);
+    -webkit-box-shadow: var(--feng-app-shadow);
+    box-shadow: var(--feng-app-shadow);
+    border: 1px solid rgba(var(--feng-app-color), .1);
+    overflow: hidden;
+    /* height: 0; */
+    position: relative;
+    z-index: 10;
+}
+
+.feng-select-option {
+    line-height: 20px;
+    padding: 2px 10px;
+    margin: 4px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.feng-select-options--selected::before {
+    content: "";
+    position: absolute;
+    border-radius: 5px;
+    left: 0;
+    top: 50%;
+    height: 18px;
+    width: 3px;
+    transform: translateY(-50%);
+    background-color: var(--feng-app-highlight-background-color);
+}
+
+.feng-select-options--selected,
+.feng-select-option:hover {
+    background-color: var(--feng-app-hover-background-color);
+}
+
+.feng-select-option__label {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.feng-select-options-animation-enter-active {
+    transition: all .3s cubic-bezier(0.42, 0, 0.33, 1);
+}
+
+.feng-select-options-animation-enter-from,
+.feng-select-options-animation-leave-to {
+    transform: translateY(-20px);
+    opacity: 0;
+}

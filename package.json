@@ -1,0 +1,20 @@
+{
+  "name": "feng-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm -C play dev",
+    "docs:dev": "pnpm -C docs dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@feng-ui/components": "workspace:^",
+    "@feng-ui/theme-chalk": "workspace:^",
+    "@feng-ui/utils": "workspace:^",
+    "typescript": "^5.4.5",
+    "vue": "^3.4.27"
+  }
+}

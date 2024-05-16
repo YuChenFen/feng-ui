@@ -1,0 +1,95 @@
+.feng-item-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.feng-item-menu[position="right"] .feng-item-menu-options {
+    left: 100%;
+}
+
+.feng-item-menu[position="left"] .feng-item-menu-options {
+    right: 100%;
+}
+
+.feng-item-menu[position="top"] {
+    flex-direction: column-reverse;
+}
+
+.feng-item-menu[position="top"] .feng-item-menu-options {
+    bottom: 100%;
+}
+
+.feng-item-menu[position="bottom"] {
+    flex-direction: column;
+}
+
+.feng-item-menu[position="bottom"] .feng-item-menu-options {
+    top: 100%;
+}
+
+.feng-item-menu[position="child"] .feng-item-menu-options {
+    top: -10px;
+    left: 100%;
+}
+
+.feng-item-menu-options {
+    position: absolute;
+    height: max-content;
+    width: max-content;
+    margin: 5px;
+    padding: 6px 5px 4px 5px;
+    border-radius: 4px;
+    background-color: var(--feng-app-background-color);
+    -webkit-box-shadow: var(--feng-app-shadow);
+    box-shadow: var(--feng-app-shadow);
+    border: 1px solid rgba(var(--feng-app-color), .1);
+    z-index: 10;
+    width: max-content;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: rgb(var(--feng-app-color));
+}
+
+.feng-item-menu-options .feng-item-menu-option {
+    flex: 1 1 0%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 20px;
+    padding: 2px 10px;
+    border-radius: 4px;
+    transition: all .5s;
+}
+
+.feng-item-menu-option:hover {
+    background-color: var(--feng-app-hover-background-color);
+}
+
+.feng-item-menu-option__label {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.feng-item-menu-options .option-label {
+    font-size: 14px;
+}
+
+.feng-item-menu-options-animation-enter-active {
+    transition: all .3s cubic-bezier(0.42, 0, 0.33, 1);
+}
+
+.feng-item-menu-options-animation-enter-from,
+.feng-item-menu-options-animation-leave-to {
+    transform: translateY(-20px);
+    opacity: 0;
+}

@@ -1,0 +1,50 @@
+.feng-button {
+    display: inline-block;
+    padding: 6px 10px;
+    border: 1px solid rgba(var(--feng-app-color), .1);
+    box-shadow: var(--feng-app-shadow);
+    border-radius: 5px;
+    background-color: var(--feng-app-background-color);
+    color: rgb(var(--feng-app-color));
+    cursor: pointer;
+}
+
+.feng-button:hover {
+    background-color: var(--feng-app-hover-background-color);
+}
+
+.feng-button--disabled,
+.feng-button:active {
+    background-color: var(--feng-app-hover-background-color);
+    color: var(--feng-app-hover-color);
+    box-shadow: none;
+}
+
+.feng-button--disabled {
+    cursor: not-allowed;
+}
+
+.feng-button p {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+    line-height: 1.75em;
+}
+
+.feng-button .feng-button-icon {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
