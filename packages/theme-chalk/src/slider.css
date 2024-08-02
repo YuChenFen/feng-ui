@@ -45,6 +45,7 @@
     height: 25px;
     transition: opacity 0.3s;
     opacity: 0;
+    display: none;
 }
 
 .feng-slider__tips p {
@@ -75,5 +76,6 @@
 }
 
 .feng-slider input[type=range]:hover~.feng-slider__tips {
+    display: block;
     opacity: 1;
 }

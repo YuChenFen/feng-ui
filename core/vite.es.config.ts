@@ -1,14 +1,20 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-// import dts from 'vite-plugin-dts';
+import dts from 'vite-plugin-dts';
 
 export default defineConfig({
     plugins: [
         vue(),
-        // dts({
-        //     tsconfigPath: '../tsconfig.build.json',
-        //     outDir: 'dist/types'
-        // })
+        dts({
+            tsconfigPath: '../tsconfig.build.json',
+            include: [
+                "core/index.ts",
+                "package/utils/*.ts",
+                "package/components/**/*.ts",
+                "package/components/**/*.vue"
+            ],
+            outDir: 'dist/types'
+        })
     ],
     build: {
         outDir: 'dist/es',
@@ -20,7 +26,11 @@ export default defineConfig({
         },
         rollupOptions: {
             external: [
-                'vue'
+                'vue',
+                "typescript",
+                "@feng-ui/components",
+                "@feng-ui/theme-chalk",
+                "@feng-ui/utils",
             ],
             output: {
                 // assetFileNames: (assetInfo) => {
